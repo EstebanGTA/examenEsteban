@@ -1,0 +1,56 @@
+JSON USADOS
+PARA HACER UN GETALL DE LAS JOYAS:
+http://localhost:7004/joyaEsteban
+RESPUESTA:
+[
+    {
+        "id_joya": 3,
+        "precio": 99.95,
+        "fecha_creacion": "2024-05-21T00:00:00.000+00:00",
+        "disponible": true,
+        "nombre": "Anillo de oro solido",
+        "catalogo": {
+            "id_catalogo": 2,
+            "detalle": []
+        }
+    },
+    {
+        "id_joya": 4,
+        "precio": 99.95,
+        "fecha_creacion": "2024-05-21T00:00:00.000+00:00",
+        "disponible": true,
+        "nombre": "collar de rubi",
+        "catalogo": {
+            "id_catalogo": 1,
+            "detalle": []
+        }
+    }
+]
+
+PARA INSERTAR UNA JOYA, PREVIAMENTE SE CREA EL ID DEL CATALOGO:
+http://localhost:7004/joyaEsteban
+{
+   "precio": 250.25,
+   "fecha_creacion": "2024-05-21T00:00:00Z",
+   "disponible": true,
+   "nombre": "Collar de rubi",
+   "catalogo": {
+    "id_catalogo": 2
+  }
+}
+
+PARA EDITAR UNA JOYA
+http://localhost:7004/joyaEsteban/1
+{
+   "precio": 99.95,
+   "fecha_creacion": "2024-05-21T00:00:00Z",
+   "disponible": true,
+   "nombre": "edit",
+   "catalogo": {
+    "id_catalogo": 1
+  }
+}
+ELIMINAR POR NOMBRE:
+http://localhost:7004/joyaEsteban/Collar%20de%20rubi
+EN CASO DE QUE EL NOMBRE CONTENGA ESPACIOS PONER %20
+
